@@ -35,28 +35,29 @@
                     </select>
                 </div>
             </div> -->
-
-            <!-- Single disk da mettere dentro foreach  -->
-            <?php foreach ($database as $song) { ?>
-
-                <div class="disk-card">
+            <div class="disk-container">
+                <!-- Single disk da mettere dentro foreach  -->
+                <?php foreach ($database as $song) { ?>
     
-                    <!-- Poster  -->
-                    <div class="poster">
-                        <img <?php echo 'src='$song['poster']''; ?> <?php echo 'alt='$song['poster']''; ?>>
+                    <div class="disk-card">
+        
+                        <!-- Poster  -->
+                        <div class="poster">
+                            <img src="<?php echo $song['poster']; ?>" alt="<?php echo $song['title']; ?>">                        
+                        </div>
+        
+                        <!-- Disk Title  -->
+                        <div class="title"><?php echo $song['title']; ?></div>
+        
+                        <!-- Author  -->
+                        <div class="author"><?php echo $song['author']; ?></div>
+        
+                        <!-- Date  -->
+                        <div class="year"><?php echo $song['year']; ?></div>
+        
                     </div>
-    
-                    <!-- Disk Title  -->
-                    <div class="title">{{ diskObject.title }}</div>
-    
-                    <!-- Author  -->
-                    <div class="author">{{ diskObject.author }}</div>
-    
-                    <!-- Date  -->
-                    <div class="year">{{ diskObject.year }}</div>
-    
-                </div>
-            <?php } ?>
+                <?php } ?>
+            </div>
 
         </div>
     </div>
